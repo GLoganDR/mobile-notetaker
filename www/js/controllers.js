@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('starter.controllers', [])
+  angular.module('starter')
 
   .controller('DashCtrl', function($scope){
   })
@@ -12,9 +12,6 @@
 
   .controller('FriendDetailCtrl', function($scope, $stateParams, Friends){
     $scope.friend = Friends.get($stateParams.friendId);
-  })
-
-  .controller('AccountCtrl', function($scope){
   });
 
 })();

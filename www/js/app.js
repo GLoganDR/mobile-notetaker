@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+  angular.module('starter', ['ionic', 'starter.services'])
 
   .run(function($ionicPlatform){
     $ionicPlatform.ready(function(){
