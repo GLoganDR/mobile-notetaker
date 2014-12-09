@@ -3,10 +3,16 @@
 
   angular.module('starter')
 
-  .controller('AccountCtrl', function($scope){
+  .controller('AccountCtrl', function($rootScope, $scope, $state, User){
     $scope.user = {};
     $scope.login = function(user){
-      console.log('user', user);
+      User.login(user).then(function(response){
+        $rootScope.rootuser = response.data;
+        $state.go('tab.dash');
+        $scope.user = {};
+      }, function(){
+        $scope.user = {};
+      });
     };
   });
 

@@ -14,7 +14,9 @@
     });
   })
 
-  .config(function($stateProvider, $urlRouterProvider){
+  .config(function($stateProvider, $urlRouterProvider, $httpProvider){
+    $httpProvider.defaults.withCredentials = true;
+
     $stateProvider
       .state('tab', {
         url: '/tab',
@@ -26,7 +28,7 @@
         views: {
           'tab-dash': {
             templateUrl: 'templates/tab-dash.html',
-            controller: 'DashCtrl'
+            controller: 'DashboardCtrl'
           }
         }
       })
