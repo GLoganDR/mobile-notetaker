@@ -8,6 +8,14 @@
       return $http.get(origin + '/notes/count');
     }
 
-    return {count:count};
+    function query(){
+      return $http.get(origin + '/notes');
+    }
+
+    function show(noteId){
+      return $http.get(origin + '/notes/' + noteId);
+    }
+
+    return {count:count, query:query, show:show};
   });
 })();

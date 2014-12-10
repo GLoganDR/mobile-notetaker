@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('starter', ['ionic', 'starter.services'])
+  angular.module('starter', ['ionic'])
 
   .run(function($ionicPlatform){
     $ionicPlatform.ready(function(){
@@ -32,21 +32,21 @@
           }
         }
       })
-      .state('tab.friends', {
-        url: '/friends',
+      .state('tab.notes-list', {
+        url: '/notes',
         views: {
-          'tab-friends': {
-            templateUrl: 'templates/tab-friends.html',
-            controller: 'FriendsCtrl'
+          'tab-notes': {
+            templateUrl: 'templates/tab-notes-list.html',
+            controller: 'NotesListCtrl'
           }
         }
       })
-      .state('tab.friend-detail', {
-        url: '/friend/:friendId',
+      .state('tab.notes-detail', {
+        url: '/notes/:noteId',
         views: {
-          'tab-friends': {
-            templateUrl: 'templates/friend-detail.html',
-            controller: 'FriendDetailCtrl'
+          'tab-notes': {
+            templateUrl: 'templates/tab-notes-detail.html',
+            controller: 'NotesDetailCtrl'
           }
         }
       })
